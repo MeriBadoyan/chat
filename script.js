@@ -6,7 +6,8 @@ const errorMessage = document.getElementById('error-message')
 
 const firstName = prompt('Enter your name')
 const date = new Date
-const sendTime = date.toLocaleString("en-GB", { year: "numeric", month: '2-digit', day: '2-digit' })
+const sendTime = date.toLocaleString("en-GB", { year: "numeric", month: '2-digit', day: '2-digit' }) + ' '
+    + date.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" })
 
 const sendMessage = () => {
     const message = messageInput.value.trim()
